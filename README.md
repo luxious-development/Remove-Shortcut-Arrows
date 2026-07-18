@@ -1,41 +1,35 @@
 RemoveShortCutArrow
 
-Simple Windows shortcut arrow remover.
+Remove Windows shortcut arrows using a simple batch script.
 
 Files
 
 · RemoveShortCutArrowByNoxs.bat - removes shortcut arrows
-· RemoveShortCutArrowByNoxs.reg - removes shortcut arrows
-· RestoreShortCutArrow.bat - restores default arrows
-· RestoreShortCutArrow.reg - restores default arrows
+· RestoreShortCutArrowByNoxs.bat - restores default shortcut arrows
 
 How to use
 
 Remove:
 
-· Run .bat as Administrator, OR
-· Double-click .reg and click Yes
+· Right-click RemoveShortCutArrowByNoxs.bat → Run as Administrator
 
 Restore:
 
-· Run .bat as Administrator, OR
-· Double-click .reg and click Yes
+· Right-click RestoreShortCutArrow.bat → Run as Administrator
 
-Restart File Explorer or reboot after.
+Explorer restarts automatically. No reboot needed.
 
 What it does
 
-Adds/removes this registry key:
+Adds registry value:
 
 HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Icons
+"29"="%windir%\System32\shell32.dll,50"
 
 
-String 29 points to:
-
-%windir%\System32\shell32.dll,50
-
+Clears icon cache and restarts Explorer.
 
 Requirements
 
 · Windows 7/8/10/11
-· Admin rights for .bat files
+· Administrator rights
